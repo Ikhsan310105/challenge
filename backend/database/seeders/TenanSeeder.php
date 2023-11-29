@@ -10,9 +10,15 @@ class TenanSeeder extends Seeder
     public function run()
     {
         Tenan::create([
-            'KodeTenan' => 'TEN001',
-            'NamaTenan' => 'Food Corner',
-            'HP' => '081234567890',
+            'KodeTenan' => 'TK[221511058]01',
+            'NamaTenan' => 'ikhsanmaret',
+            'HP' => '08221511058375',
+        ]);
+
+        Tenan::create([
+            'KodeTenan' => 'TK[221511058]02',
+            'NamaTenan' => 'ikhsanmart',
+            'HP' => '08221511058735',
         ]);
 
         // Add more Tenan records as needed

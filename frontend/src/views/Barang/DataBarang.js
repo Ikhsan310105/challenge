@@ -55,7 +55,7 @@ const KelolaDataBarang = () => {
 
   const handleDelete = (data) => {
     Swal.fire({
-      title: `Apakah anda yakin ingin menghapus ${data.nama}?`,
+      title: `Apakah anda yakin ingin menghapus?`,
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',

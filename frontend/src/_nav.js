@@ -42,6 +42,12 @@ const _nav = [
   },
   {
     component: CNavItem,
+    name: 'Transaksi',
+    to: '/transaksi',
+    icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
     name: 'Struk',
     to: '/struk',
     icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,

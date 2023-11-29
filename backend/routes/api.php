@@ -5,18 +5,6 @@ use App\Http\Controllers\BarangController;
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\ViewController;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
-
-
 Route::get('/barangs', [BarangController::class, 'index']);
 Route::post('/barangs', [BarangController::class, 'store']);
 Route::get('/barangs/{id}', [BarangController::class, 'show']);
