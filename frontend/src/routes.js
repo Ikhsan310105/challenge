@@ -7,6 +7,10 @@ const barangEdit = React.lazy(() => import('./views/Barang/EditBarang'))
 
 const kasir = React.lazy(() => import('./views/Kasir/DataKasir'))
 
+const tenan = React.lazy(() => import('./views/Tenan/DataTenan.js'))
+
+const Struk = React.lazy(() => import('./views/Struk/LihatStruk'))
+
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
@@ -14,6 +18,8 @@ const routes = [
   { path: '/barang/tambah', name: 'Barang Tambah', element: barangAdd },
   { path: '/edit', name: 'Barang Edit', element: barangEdit },
   { path: '/kasir', name: 'Kasir', element: kasir },
+  { path: '/tenan', name: 'Kasir', element: tenan },
+  { path: '/struk', name: 'Struk', element: Struk },
 ]
 
 export default routes

@@ -34,6 +34,18 @@ const _nav = [
     to: '/kasir',
     icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
   },
+  {
+    component: CNavItem,
+    name: 'Tenan',
+    to: '/Tenan',
+    icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Struk',
+    to: '/struk',
+    icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
+  },
 ]
 
 export default _nav
