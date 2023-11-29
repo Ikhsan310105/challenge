@@ -19,6 +19,7 @@ import { Link } from 'react-router-dom'
 
 const FormEditBarang = () => {
   const [loading, setLoading] = useState(false)
+  const [kodeBarang, setKodeBarang] = useState()
   const [formData, setFormData] = useState({
     NamaBarang: '',
     Satuan: '',
@@ -34,6 +35,7 @@ const FormEditBarang = () => {
       HargaSatuan: dataBarang.HargaSatuan,
       Stok: dataBarang.Stok,
     })
+    setKodeBarang(dataBarang.KodeBarang)
   }, [])
 
   const handleNamaBarangChange = (e) => {
@@ -68,7 +70,7 @@ const FormEditBarang = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:8000/api/barangs', newBarang)
+      const response = await axios.put('http://localhost:8000/api/barangs' + kodeBarang, newBarang)
       Swal.fire({
         title: 'Berhasil',
         text: `Data Barang berhasil ditambahkan.`,
