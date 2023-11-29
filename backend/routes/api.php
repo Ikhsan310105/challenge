@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\TransaksiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,8 @@ Route::post('/barangs', [BarangController::class, 'store']);
 Route::get('/barangs/{id}', [BarangController::class, 'show']);
 Route::put('/barangs/{id}', [BarangController::class, 'update']);
 Route::delete('/barangs/{id}', [BarangController::class, 'destroy']);
+
+Route::post('/transaksi', [TransaksiController::class, 'createTransaksi']);
 // Route::post('/login', [AuthenticationController::class, 'login']);
 
 // // Admin routes here

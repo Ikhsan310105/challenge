@@ -18,15 +18,23 @@ class BarangController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'KodeBarang' => 'required|unique:barangs,KodeBarang',
             'NamaBarang' => 'required',
             'Satuan' => 'required',
             'HargaSatuan' => 'required|numeric',
             'Stok' => 'required|integer',
         ]);
 
+        // Mendapatkan NIM dari pengguna (gantilah ini sesuai dengan bagaimana Anda mengelola informasi pengguna)
+        $nim = '221511058'; // Contoh NIM statis, sesuaikan dengan cara Anda mendapatkan NIM
+
+        // Mendapatkan jumlah barang yang sudah ada untuk NIM tersebut
+        $countBarangNIM = Barang::where('KodeBarang', 'like', "BRG[$nim]%")->count() + 1;
+
+        // Format KodeBarang
+        $kodeBarang = "BRG[$nim]" . sprintf('%02d', $countBarangNIM);
+
         $barang = new Barang([
-            'KodeBarang' => $request->input('KodeBarang'),
+            'KodeBarang' => $kodeBarang,
             'NamaBarang' => $request->input('NamaBarang'),
             'Satuan' => $request->input('Satuan'),
             'HargaSatuan' => $request->input('HargaSatuan'),

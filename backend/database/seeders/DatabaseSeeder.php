@@ -20,5 +20,7 @@ class DatabaseSeeder extends Seeder
         // ]);
 //         URUTAN SEEDER
         $this->call(BarangSeeder::class);
+        $this->call(KasirSeeder::class);
+        $this->call(TenanSeeder::class);
     }
 }

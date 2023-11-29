@@ -18,7 +18,7 @@ class BarangSeeder extends Seeder
     {
         // Seed your barang data here
         Barang::create([
-            'KodeBarang' => 'BRG001',
+            'KodeBarang' => 'BRG[221511058]01',
             'NamaBarang' => 'Indomie',
             'Satuan' => 'Pcs',
             'HargaSatuan' => 3000,
@@ -26,7 +26,7 @@ class BarangSeeder extends Seeder
         ]);
 
         Barang::create([
-            'KodeBarang' => 'BRG002',
+            'KodeBarang' => 'BRG[221511058]02',
             'NamaBarang' => 'Susu Ultra',
             'Satuan' => 'Pcs',
             'HargaSatuan' => 5000,
